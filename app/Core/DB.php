@@ -68,8 +68,7 @@ class DB
         if (!(
             getenv('DB_HOST') and
             getenv('DB_DATABASE') and
-            getenv('DB_USERNAME') and
-            getenv('DB_PASSWORD')
+            getenv('DB_USERNAME')
         )) {
             var_dump('Please add database details in .env file');
             die;

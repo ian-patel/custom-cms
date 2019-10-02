@@ -1,0 +1,26 @@
+{
+    "name": "ian-patel/reservation",
+    "type": "project",
+    "description": "Holiday home reservation",
+    "license": "MIT",
+    "require": {
+        "php": "^7.1",
+        "ext-json": "*",
+        "vlucas/phpdotenv": "^3.6",
+        "ext-pdo": "*"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Supports/Helpers.php"
+        ]
+    },
+    "prefer-stable": true
+}

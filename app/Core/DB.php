@@ -3,6 +3,7 @@
 namespace App\Core;
 
 use PDO;
+use Exception;
 use PDOException;
 use Dotenv\Dotenv;
 
@@ -21,6 +22,8 @@ class DB
     public function __construct()
     {
         $this->loadEnv();
+        $this->validateDatabase();
+
         try {
             $this->db = new PDO(
                 'mysql:host=' . getenv('DB_HOST') . ';dbname=' . getenv('DB_DATABASE'),
@@ -55,5 +58,21 @@ class DB
     {
         $result = $this->db->query($query);
         return (object)$result->fetchAll();
+    }
+
+    /**
+     * Validate Database details
+     */
+    private function validateDatabase()
+    {
+        if (!(
+            getenv('DB_HOST') and
+            getenv('DB_DATABASE') and
+            getenv('DB_USERNAME') and
+            getenv('DB_PASSWORD')
+        )) {
+            var_dump('Please add database details in .env file');
+            die;
+        }
     }
 }

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Ruthie');
+
+body {
+    padding: 0 4em;
+}
+
+.menu-logo{
+    font-family: 'Ruthie', cursive !important;
+    font-size: 1.5em !important;
+    color: #000000 !important;
+    line-height: 0;
+    padding: 5px;
+    display: inline-block;
+}
+
+.cart-remove {
+    font-size: 10px;
+}
+
+.column {
+    padding: .4rem !important;
+}
+
+.p-t-1 {
+    padding-top: 1em !important;
+}
+.p-t-2 {
+    padding-top: 2em !important;
+}
+.p-t-3 {
+    padding-top: 3em !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.nice-bg {
+    background: #f7f8f9;
+}
